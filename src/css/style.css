@@ -19,6 +19,10 @@ input[type="date"]:before {
     content: "";
   }
 
+a.navbar-item:visited {
+    color:black;
+  }
+
 .navbar-item, .navbar-item:link {
   text-decoration: none;
 }
@@ -61,5 +65,5 @@ input[type="date"]:before {
 
 .list-item {
   pointer-events: none;
-cursor: default;
+  cursor: default;
 }

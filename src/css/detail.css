@@ -42,12 +42,12 @@ a:hover {
   text-decoration: underline;
 }
 
-input {}
+/* input {}
 
 input:focus {}
 
 input[type="submit"],
-input[type="button"] {}
+input[type="button"] {} */
 
 
 /* 5. Objects - wrappers, cards, etc. */

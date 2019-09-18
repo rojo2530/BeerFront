@@ -100,7 +100,7 @@ const renderBeersDom = async (text,date) => {
 			const beersFilter = beers.filter(beer => (
 				beer.firstBrewed === date)
 			);
-			if (beers.length === 0) {
+			if (beersFilter.length === 0) {
 				return noResultsRenderDom('No Results found!!!');
 			}
 			return renderBeers(main, beersFilter.slice(0,9));  //Del resultado total solo mostramos los 10 primeros

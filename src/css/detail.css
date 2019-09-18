@@ -1,15 +1,6 @@
-/* Using the ITCSS (http://itcss.io/) architecture for CSS */
-
-
-/* 1. Settings - Preprocessors variables, fonts, imports, etc. */
 
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-/* 2. Tools - mixins */
-
-
-/* 3. Generic - very generic CSS rules */
 
 * {
   box-sizing: border-box;
@@ -22,9 +13,6 @@
 i {
   font-size: 20px;
 }
-
-
-/* 4. Elements - HTML Elements of the page h1-h6, etc. */
 
 body {
   margin: 0;
@@ -63,13 +51,13 @@ input[type="button"] {} */
   width: 100vw;
 } */ 
 
-.itemlist{ 
+/* .itemlist{ 
   max-width:1024px;  
   margin:auto; 
   padding:20px;
   display:flex;
   flex-wrap: wrap;
-}
+} */
 
 .itemlist-item-wrapper{width: calc(90% / 3); display:inline-block; font-size: 20px !important; margin:1% 0.5% 0.5% 0.5%; background-color:white; padding:10px;
 box-sizing: content-box;}
@@ -85,7 +73,7 @@ box-sizing: content-box;}
 }
 
 
-.lightbox-blanket {
+/* .lightbox-blanket {
   background-color: rgba(30, 30, 30, 0.9);
   display: block;
   height: 100vh;
@@ -94,7 +82,7 @@ box-sizing: content-box;}
   top: 0;
   width: 100vw;
   z-index: 20;
-}
+} */
 
 .pop-up-container {
   height: 100%;

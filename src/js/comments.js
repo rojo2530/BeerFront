@@ -11,7 +11,6 @@ export const addCommentListener = id => {
 	const commentsGroup = document.querySelector('.comments-group');
 	const errorMessage = document.querySelector('.error-message');
 	const renderErrorMessage = toggle(errorMessage);
-	console.log(errorMessage);
 	quoteForm.addEventListener('submit', async  evt => {
 		evt.preventDefault();
 		if (quote.validity.valid) {
@@ -30,9 +29,8 @@ export const addCommentListener = id => {
 			renderErrorMessage('is-hidden', 'show');
 		}
 	});
-	//Para quitar el mensaje de error
+	//Para quitar el mensaje de error si deja el input del comentario vacío
 	quote.addEventListener('focus', () => {
-		console.log(errorMessage.classList);
 		if (!errorMessage.classList.contains('is-hidden')) {
 			renderErrorMessage('show', 'is-hidden');
 		}
@@ -74,7 +72,7 @@ export const createCommentNode = comment => {
 
 export const renderComments = (element,comments) => {
 	//  Se debe a un bug de la api, ya que cuando no hay comentarios el campo se llama comments, pero cuando creas 
-	// //comentarios se crea un nuevo campo array en la api, llamado comment en singular, por tanto controlamos que no sea undefined
+	// comentarios se crea un nuevo campo array en la api, llamado comment en singular, por tanto controlamos que no sea undefined
 	if (comments) {
 		const htmlComments = comments.map(comment => commentTemplate(comment)).join('');
 		element.innerHTML = htmlComments;

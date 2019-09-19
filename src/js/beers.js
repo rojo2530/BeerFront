@@ -3,37 +3,18 @@ import api from './api.js';
 import { noResultsRenderDom, errorRenderDom } from './error.js';
 
 const templateBeer = beer => `
-<div class="column is-one-quarter-desktop is-half-tablet">
-<!-- <div class="card">
-		<div class="card-image">
-				<figure class="image is-3by2">
-					<img src="https://unsplash.it/300/200/?random&pic=1" alt="">
-				</figure>
-				<div class="card-content is-overlay is-clipped">
-					<span class="tag is-info">
-						Photo Title That is really long to show the clipping
-					</span>       
-				</div>
-		</div>
-		<footer class="card-footer">
-				<a class="card-footer-item">
-					BUY
+	<div class="column is-one-quarter-desktop is-half-tablet">
+		<div class="card">
+		 <header class="card-header">
+				<p class="card-header-title">
+					${beer.name}
+				</p>
+				<a href="#" class="card-header-icon" aria-label="more options">
+					<span class="icon">
+						<i class="fa fa-angle-down" aria-hidden="true"></i>
+					</span>
 				</a>
-		</footer>
-</div> -->
-<div class="card">
-		 
-			<header class="card-header">
-							<p class="card-header-title">
-								${beer.name}
-							</p>
-							<a href="#" class="card-header-icon" aria-label="more options">
-								<span class="icon">
-									<i class="fa fa-angle-down" aria-hidden="true"></i>
-								</span>
-							</a>
 			</header>
-
 			<div class="card-content ${beer.isHidden ? 'is-hidden' : ''}">
 				<div class="media">
 					<div class="media-left">
@@ -51,13 +32,9 @@ const templateBeer = beer => `
 						<p class="has-text-justified">${beer.description.substring(0,50)} <a href="/detail/${beer.beerId}">...read more</a>.
 					</div>
 				</div>
-		
 				<div class="content ">
-					<!-- <p class="has-text-justified">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-					Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-					<a href="#">#css</a> <a href="#">#responsive</a></p> -->
-					<br>
-					<time datetime="2016-1-1"><span class="has-text-grey">First Brewed: </span><span>${beer.firstBrewed}</span></time>
+				<br>
+				<time datetime="2016-1-1"><span class="has-text-grey">First Brewed: </span><span>${beer.firstBrewed}</span></time>
 				</div>
 			</div>
 		</div>
@@ -88,7 +65,6 @@ const renderBeers = (element, beers) => {
 
 const { getBeers, getAllBeers } = api();
 const buttonSearch = document.querySelector('.button');
-// const loader = document.querySelector('.loading');
 
 const renderBeersDom = async (text,date) => {
 	try {

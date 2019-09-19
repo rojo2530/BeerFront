@@ -1,4 +1,4 @@
-const searchInput = document.querySelector('#search');
+const inputSearch = document.querySelector('#search');
 const inputDate = document.querySelector('#search-date');
 
 const filters = {
@@ -7,12 +7,12 @@ const filters = {
 };
 
 export const saveFilter = () => {
-	localStorage.setItem(filters.name, searchInput.value);
+	localStorage.setItem(filters.name, inputSearch.value);
 	localStorage.setItem(filters.date, inputDate.value);
 };
 
 const restoreFilter = () => {
-	searchInput.value = localStorage.getItem('name');
+	inputSearch.value = localStorage.getItem('name');
 	inputDate.value = localStorage.getItem('date');
 };
 

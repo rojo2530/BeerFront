@@ -41,19 +41,6 @@ const api = () => {
 				throw err;
 			}
 		},
-		// getBeersFilter: async text => {
-		// 	try {
-		// 		const beers = await axios({
-		// 			method: 'get',
-		// 			url: `${searchBeersAPIEndpoint}${text}`,
-		// 			headers: {'X-API-KEY': API_KEY}
-		// 		});
-		// 		return beers.data.beers;
-		// 	} catch (err) {
-		// 		console.error(err);
-		// 		throw err;
-		// 	}
-		// },
 		getBeerId: async id => {
 			try {
 				const beer = await axios({

@@ -81,7 +81,12 @@ a:hover {
   width: 49%;
 }
 
-.product-bottom{border-top:1px solid #ccc; position:relative; padding-top:20px;}
+.product-bottom {
+  border-top:1px solid #ccc; 
+  position:relative; 
+  padding-top:20px;
+  margin-top: 1rem;
+}
 
 @media (max-width:650px){
   .product-left, .product-right, .product-bottom{
@@ -165,7 +170,6 @@ a:hover {
 .container-input-quote {
   margin-top:25px;
 }
-
 
 #button-comment {
   margin-top: 15px;

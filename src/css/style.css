@@ -72,3 +72,8 @@ a.navbar-item:visited {
   pointer-events: none;
   cursor: default;
 }
+
+.product-extended > a {
+    pointer-events: none;
+    cursor: default;
+}

@@ -7,14 +7,9 @@ export const toggle = elemento => (removeClass, addClass) => {
 	elemento.classList.add(addClass);
 };
 
-
-// const loader = document.querySelector('#loader');
 const loader = document.querySelector('.loading');
 const errorMessage = document.querySelector('.error-message');
 
-
 export const renderLoader = toggle(loader);
 export const renderErrorMessage = toggle(errorMessage);
-
-
 

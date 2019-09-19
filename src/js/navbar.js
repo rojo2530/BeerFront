@@ -6,8 +6,8 @@ const navbarBurger = document.querySelector('.navbar-burger');
 const searchInput = document.querySelector('#search');
 
 Date.prototype.getMonthFormatted = function() {
-	var month = this.getMonth() + 1;
-	return month < 10 ? '0' + month : '' + month; // ('' + month) for string result
+	let month = this.getMonth() + 1;
+	return month < 10 ? '0' + month : '' + month; 
 };
 
 navbarBurger.addEventListener('click', function () {

@@ -10,7 +10,7 @@ const addLikesListener = id => {
 			evt.preventDefault();
 			btnCounter.classList.add('is-loading');
 			console.log(evt.target);
-			const response = await addBeerLike(id);
+			await addBeerLike(id);
 			spanCounter.innerText++;
 			//No uso el evt, aquí porque se puede hacer click en el span tb
 		} catch (err) {

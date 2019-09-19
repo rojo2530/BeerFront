@@ -8,8 +8,6 @@ const detailTemplate = beer => `
 <div class="pop-up-container">
 <div class="pop-up-container-vertical">
 	<div class="pop-up-wrapper">
-		<!--<div class="go-back"><i class="fa fa-arrow-left"></i>
-		</div>-->
 		<div class="product-details">
 			<div class="product-left">
 				<div class="product-info">
@@ -45,10 +43,6 @@ const detailTemplate = beer => `
 					</div>
 
 				</div>
-				<!--<div class="product-quantity">
-					<label for="product-quantity-input" class="product-quantity-label"></label>
-					
-				</div>-->
 			</div>
 			<div class="product-bottom">
 			<br><br>

@@ -17,11 +17,11 @@ const api = () => {
 		getAllBeers: async text => {
 			try {
 				const requestUrl = typeof(text) !== 'undefined' ? `${API_URL}?search=${text}` : API_URL;  //Buscamos sin limit , aq filtre por texto
-				const beers = await axios({
+				const response = await axios({
 					method: 'get',
 					url: requestUrl,
 				});
-				return beers.data.beers;
+				return response.data.beers;
 			} catch (err) {
 				console.error('Error!!!!: ',err);
 				throw err;
@@ -30,11 +30,11 @@ const api = () => {
 		getBeers: async text => {
 			try {
 				const requestUrl = typeof(text) !== 'undefined' ? `${searchBeersAPIEndpoint}${text}` : beersAPIEndpoint;
-				const beers = await axios({
+				const response = await axios({
 					method: 'get',
 					url: requestUrl,
 				});
-				return beers.data.beers;
+				return response.data.beers;
 			} catch(err) {
 				console.error('Error!!!!: ',err);
 				throw err;
@@ -42,11 +42,11 @@ const api = () => {
 		},
 		getBeerId: async id => {
 			try {
-				const beer = await axios({
+				const response = await axios({
 					method: 'get',
 					url: `${API_URL}/${id}`,
 				});
-				return beer.data.beer; 
+				return response.data.beer; 
 			} catch (err) {
 				console.error(err);
 				throw err;

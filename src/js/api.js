@@ -29,7 +29,6 @@ const api = () => {
 		},
 		getBeers: async text => {
 			try {
-				console.log(text);
 				const requestUrl = typeof(text) !== 'undefined' ? `${searchBeersAPIEndpoint}${text}` : beersAPIEndpoint;
 				const beers = await axios({
 					method: 'get',

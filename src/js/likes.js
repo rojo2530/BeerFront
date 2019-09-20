@@ -1,4 +1,5 @@
 import api from './api.js';
+import { errorRenderDom } from './error.js';
 
 const { addBeerLike } = api();
 
@@ -9,12 +10,11 @@ const addLikesListener = id => {
 		try {
 			evt.preventDefault();
 			btnCounter.classList.add('is-loading');
-			console.log(evt.target);
 			await addBeerLike(id);
 			spanCounter.innerText++;
 			//No uso el evt, aquí porque se puede hacer click en el span tb
 		} catch (err) {
-			console.error(err);
+			errorRenderDom('Error to post a like', err);
 		} finally {
 			btnCounter.classList.remove('is-loading');
 		}

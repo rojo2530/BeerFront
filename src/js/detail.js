@@ -5,9 +5,9 @@ import { errorRenderDom } from './error.js';
 import { addCommentListener, renderComments} from './comments.js';
 
 const detailTemplate = beer => `
-	<div class="pop-up-container">
-		<div class="pop-up-container-vertical">
-			<div class="pop-up-wrapper">
+	<div class="detail-container">
+		<div class="detail-container-vertical">
+			<div class="detail-wrapper">
 				<div class="product-details">
 					<div class="product-left">
 						<div class="product-info">
@@ -83,7 +83,6 @@ const ingredientTemplate = ingredient => `
 `;
 
 const ingredientsRenderDom = (element, ingredients) => {
-	console.log(ingredients);
 	const listIngredientsHtml = ingredients.map(ingredientTemplate).join('');
 	element.innerHTML += listIngredientsHtml;
 };

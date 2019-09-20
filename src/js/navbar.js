@@ -20,7 +20,7 @@ navbarBurger.addEventListener('click', function () {
 
 const buttonSearch = document.querySelector('.button');
 const formSearch = document.querySelector('#form-search');
-const inputDate = document.querySelector('#search-date')
+const inputDate = document.querySelector('#search-date');
 
 formSearch.addEventListener('submit', evt => {
 	evt.preventDefault();

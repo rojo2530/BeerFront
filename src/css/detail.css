@@ -30,7 +30,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.pop-up-container {
+.detail-container {
   height: 100%;
   width: auto;
   display: table;
@@ -45,20 +45,20 @@ a:hover {
   }
 }
 
-.pop-up-container-vertical {
+.detail-container-vertical {
   height: 100%;
   vertical-align: middle;
   display: table-cell;
 }
 
-.pop-up-wrapper {
+.detail-wrapper {
   display: block;
   margin: 20px auto;
   width: auto;
   position: relative;
 }
 
-.pop-up-wrapper {
+.detail-wrapper {
   background-color: white;
   display: block;
   padding: 0.75rem;

@@ -3,6 +3,7 @@ import { renderLoader } from './ui.js';
 import addLikesListener from './likes.js';
 import { errorRenderDom } from './error.js';
 import { addCommentListener, renderComments} from './comments.js';
+import { renderAllIngredients } from './ingredients.js';
 
 const detailTemplate = beer => `
 	<div class="detail-container">
@@ -76,17 +77,6 @@ const detailTemplate = beer => `
 	</div>
 `;
 
-const ingredientTemplate = ingredient => `
-	<a class="list-item">
-		${ingredient.name} - ${ingredient.amount.value} ${ingredient.amount.unit}
-	</a>
-`;
-
-const ingredientsRenderDom = (element, ingredients) => {
-	const listIngredientsHtml = ingredients.map(ingredientTemplate).join('');
-	element.innerHTML += listIngredientsHtml;
-};
-
 const { getBeerId } = api();
 
 const renderDetailDOM = async id => {
@@ -97,10 +87,7 @@ const renderDetailDOM = async id => {
 		main.innerHTML = detailTemplate(beer);
 		const commentsGroup = document.querySelector('.comments-group');
 		renderComments(commentsGroup, beer.comment);
-		const ingredientsMalt = document.querySelector('.malt');
-		const ingredientsHops = document.querySelector('.hops');
-		ingredientsRenderDom(ingredientsMalt, beer.ingredients.malt);
-		ingredientsRenderDom(ingredientsHops, beer.ingredients.hops);
+		renderAllIngredients(beer);
 		window.scrollTo(0, 0); //Nos ponemos arriba del todo, sobre todo es para tema movil
 		addCommentListener(id);
 		addLikesListener(id);

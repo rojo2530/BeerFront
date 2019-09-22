@@ -64,6 +64,7 @@ const api = () => {
 				return response;
 			} catch (err) {
 				console.log(err);
+				throw err;
 			}
 		},
 		addBeerLike: async id => {
@@ -75,6 +76,7 @@ const api = () => {
 				return response;
 			} catch (err) {
 				console.log(err);
+				throw err;
 			}
 		},
 	};
